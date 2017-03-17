@@ -122,6 +122,7 @@ class RestApi
         $this->parameters['endDate'] = $this->ensureDateTime($endDate);
         $this->parameters['limit'] = $limit;
         $this->parameters['offset'] = $offset;
+        $this->parameters['skipMyChanges'] = true;
 
         $result = $this->curlRequest($url);
         return $result;
